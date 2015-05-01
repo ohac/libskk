@@ -989,14 +989,22 @@ namespace Skk {
                 state.recursive_edit_start (state.get_yomi (), state.okuri);
                 if (state.candidates.size == 0) {
                     state.candidates.clear ();
-                    state.handler_type = typeof (StartStateHandler);
+                    if (state.abbrev.len > 0) {
+                        state.handler_type = typeof (AbbrevStateHandler);
+                    } else {
+                        state.handler_type = typeof (StartStateHandler);
+                    }
                 }
                 return true;
             }
             else if (command == "abort") {
                 state.candidates.clear ();
-                state.cancel_okuri ();
-                state.handler_type = typeof (StartStateHandler);
+                if (state.abbrev.len > 0) {
+                    state.handler_type = typeof (AbbrevStateHandler);
+                } else {
+                    state.cancel_okuri ();
+                    state.handler_type = typeof (StartStateHandler);
+                }
                 return true;
             }
             else {
