@@ -352,6 +352,7 @@ namespace Skk {
 
         void start_dict_edit (string midasi, bool okuri) {
             var state = new State (_dictionaries);
+            state.typing_rule = state_stack.peek_head ().typing_rule;
             state.midasi = midasi;
             state.okuri = okuri;
             push_state (state);

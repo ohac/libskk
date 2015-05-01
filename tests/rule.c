@@ -54,6 +54,7 @@ kzik (void)
     { SKK_INPUT_MODE_HIRAGANA, "Q", "▽ん", "", SKK_INPUT_MODE_HIRAGANA },
     { SKK_INPUT_MODE_HIRAGANA, "l C-j", "", "", SKK_INPUT_MODE_HIRAGANA },
     { SKK_INPUT_MODE_HIRAGANA, "L C-j", "", "", SKK_INPUT_MODE_HIRAGANA },
+    { SKK_INPUT_MODE_HIRAGANA, "K a p e SPC k z", "▼かぺ【かん】", "", SKK_INPUT_MODE_HIRAGANA },
     { 0, NULL }
   };
 
